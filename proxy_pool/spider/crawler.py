@@ -1,6 +1,5 @@
-import json
 import re
-from .utils import get_page
+from proxy_pool.common.utils import get_page
 from pyquery import PyQuery as pq
 
 

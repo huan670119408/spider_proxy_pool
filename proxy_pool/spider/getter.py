@@ -1,4 +1,4 @@
-from .redisClient import RedisClient
+from proxy_pool.db.redisClient import RedisClient
 from .crawler import Crawler
 from .setting import *
 import sys
