@@ -7,8 +7,8 @@ try:
     from aiohttp import ClientError
 except:
     from aiohttp import ClientProxyConnectionError as ProxyConnectionError
-from .redisClient import RedisClient
-from .setting import *
+from proxy_pool.db.redisClient import RedisClient
+from proxy_pool.setting import *
 
 
 class Tester(object):
@@ -44,7 +44,7 @@ class Tester(object):
         测试主函数
         :return:
         """
-        print('测试器开始运行')
+        print('测试器开始运行111')
         try:
             count = self.redis.count()
             print('当前剩余', count, '个代理')

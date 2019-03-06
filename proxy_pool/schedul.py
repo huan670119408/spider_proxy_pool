@@ -1,9 +1,8 @@
 import time
 from multiprocessing import Process
-from .api import app
-from .getter import Getter
-from .tester import Tester
-from .redisClient import RedisClient
+from proxy_pool.api.api import app
+from proxy_pool.spider.getter import Getter
+from proxy_pool.test.tester import Tester
 from .setting import *
 
 
@@ -36,7 +35,6 @@ class Scheduler():
 
     def run(self):
         print('代理池开始运行')
-
         if TESTER_ENABLED:
             tester_process = Process(target=self.schedule_tester)
             tester_process.start()
